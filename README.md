@@ -28,7 +28,7 @@ SEU NOME COMPLETO DE PREFERÊNCIA, LEGÍVEL!!!
   - **Zonas de Disponibilidade (AZs)**: Redundância dentro das regiões.  
   - **Local Zones** e **Data Centers**: Melhoram latência para aplicações específicas.  
 
-## 🗓️ Aula 10/03 - Segurança na AWS  
+## Aula 10/03 - Segurança na AWS  
 - **POPs (Edge Locations)**: Aceleram entrega de conteúdo (CloudFront).  
 - **Modelo de responsabilidade compartilhada**:  
   - AWS protege a infraestrutura.  
