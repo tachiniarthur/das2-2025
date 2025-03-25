@@ -1,63 +1,81 @@
 # Design e Arquitetura de Software 2
 SEU NOME COMPLETO DE PREFERÊNCIA, LEGÍVEL!!!
 
-## AULA 27/02/2025
-Fazer uma arquitetura é ter que lidar com uma coisa chama trade-off (fazer escolhas).
+## Aula 24/02 - Well-Architected Framework  
+- **Seis pilares**:
+  - **Excelência Operacional**: Automação e monitoramento contínuo.  
+  - **Segurança**: Controle de acessos e proteção dos dados.  
+  - **Confiabilidade**: Resiliência e recuperação de falhas.  
+  - **Eficiência em Performance**: Uso otimizado dos recursos.  
+  - **Otimização de Custos**: Evitar desperdícios sem comprometer a qualidade.  
+  - **Sustentabilidade**: Uso eficiente e consciente da infraestrutura.  
 
-## 24/02
+## Aula 27/02 - Trade-Offs e Infraestrutura como Código  
+- **Trade-offs**: Sempre equilibrar custo, desempenho e disponibilidade.  
+- **Escalabilidade vs Elasticidade**: Crescimento planejado vs ajuste dinâmico.  
+- **Infraestrutura como Código (IaC)**: Automação total da infraestrutura.  
+- **Recursos descartáveis**: Criar e destruir servidores sem preocupação.  
+- **Baixo acoplamento**: Evitar dependências entre serviços.  
+- **Design de serviços, não servidores** (focar em **serverless**).  
+- **Escolha do banco de dados**: Relacional x NoSQL, dependendo da aplicação.  
 
-Seis pilares: Excelência Operacional, Segurança, Confiabilidade, Eficiência em Performance, Otimização de Custos e Sustentabilidade.
-Boa arquitetura = sistemas mais seguros, escaláveis e eficientes.
-Sempre buscar automação e monitoramento contínuo.
-Segurança e confiabilidade andam juntas (evitar falhas, melhorar recuperação).
-Custo e eficiência precisam ser equilibrados (evitar desperdício sem comprometer performance).
+## Aula 06/03 - Alta Disponibilidade e Otimização  
+- **Evitar ponto único de falha**: Sempre usar redundância.  
+- **Otimização de custos**: Reservar instâncias, desligar recursos ociosos.  
+- **Uso de cache**: Reduz chamadas ao banco e melhora a performance.  
+- **Infraestrutura global da AWS**:  
+  - **Regiões**: Conjuntos de data centers.  
+  - **Zonas de Disponibilidade (AZs)**: Redundância dentro das regiões.  
+  - **Local Zones** e **Data Centers**: Melhoram latência para aplicações específicas.  
 
-## Aula 27/02
+## 🗓️ Aula 10/03 - Segurança na AWS  
+- **POPs (Edge Locations)**: Aceleram entrega de conteúdo (CloudFront).  
+- **Modelo de responsabilidade compartilhada**:  
+  - AWS protege a infraestrutura.  
+  - Usuário gerencia permissões e dados.  
+- **Autenticação vs Autorização**: Definir quem acessa e o que pode fazer.  
+- **Princípio do privilégio mínimo**: Conceder apenas as permissões essenciais.  
+- **Criptografia**: Sempre proteger dados armazenados e em trânsito.  
 
-Trade-offs: Sempre existe um equilíbrio entre custo, desempenho e disponibilidade.
-Escalabilidade vs Elasticidade: Escalabilidade = crescer sob demanda, Elasticidade = ajustar dinamicamente.
-Infraestrutura como Código (IaC): Automação total, evitar configurações manuais.
-Recursos descartáveis: Criar e destruir instâncias sem preocupação.
-Baixo acoplamento: Separar componentes para evitar dependências fortes.
-Focar em serviços, não servidores (serverless quando possível).
-Escolher o banco de dados correto para cada caso (relacional, NoSQL, etc.).
+## Aula 13/03 - IAM (Identity and Access Management)  
+- **IAM**: Gestão de usuários e permissões na AWS.  
+- **Privilégio mínimo**: Evitar acessos desnecessários.  
+- **Autenticação vs Autorização**.  
+- **Formas de acesso**:  
+  - Console (gráfico).  
+  - Programático (CLI, SDK, chaves de acesso).  
 
-## Aula 06/03
+## Aula 17/03 - Políticas de Acesso e S3  
+- **Política de Identidade**: Aplicada a usuários, grupos e funções.  
+- **Política de Recurso**: Aplicada diretamente a serviços (ex: S3).  
+- **Amazon S3**:  
+  - Armazenamento escalável.  
+  - Controle de acessos e permissões.  
+  - Versionamento, criptografia e gerenciamento de ciclo de vida.  
 
-Evitar ponto único de falha: Sempre ter redundância (multi-AZ, backups, etc.).
-Otimização de custo: Pagar apenas pelo que realmente usamos (reservar instâncias, desligar ociosas).
-Uso de cache: Reduz chamadas ao banco, melhora performance.
-Infraestrutura global da AWS:
-Regiões: Conjuntos de data centers em locais específicos.
-Zonas de Disponibilidade (AZs): Subdivisões dentro de uma região para maior redundância.
-Local Zones e Data Centers: Melhoram latência para serviços específicos.
-
-## Aula 10/03
-
-POPs (Edge Locations): Melhoram entrega de conteúdo (CloudFront).
-Modelo de responsabilidade compartilhada: AWS protege infraestrutura, nós protegemos configuração e dados.
-Autenticação vs Autorização: Quem entra e o que pode fazer.
-Princípio do privilégio mínimo: Conceder apenas o necessário.
-Criptografia: Sempre proteger dados em repouso e em trânsito.
-
-## Aula 13/03
-
-IAM = Controle de usuários e permissões na AWS.
-Privilégio mínimo novamente (evitar permissões desnecessárias).
-Autenticação vs Autorização (login x permissões).
-Formas de acesso:
-Console (gráfico).
-Programático (CLI, SDK, chaves de acesso).
-
-## Aula 17/03
-
-Política de Identidade: Aplicada a usuários, grupos e funções.
-Política de Recurso: Aplicada diretamente aos serviços (ex: S3).
-S3: Armazenamento escalável, configurar permissões corretamente.
-Segurança do S3: Controle de acessos, criptografia, versionamento de objetos.
-
-
-
-
+## Aula 24/03 - S3 - Gerenciamento, Versionamento e CORS  
+- **Gerenciamento de ciclo de vida**:  
+  - Mover ou excluir objetos automaticamente (ex: arquivar no **Glacier**).  
+- **Versionamento**:  
+  - Mantém versões antigas dos arquivos.  
+  - Aumenta custo, então precisa ser bem gerenciado.  
+- **CORS (Cross-Origin Resource Sharing)**:  
+  - Define quais origens podem acessar o S3.  
+  - **Exemplo de configuração:**
+    ```json
+    [
+      {
+        "AllowedHeaders": ["*"],
+        "AllowedMethods": ["GET", "PUT", "POST", "DELETE"],
+        "AllowedOrigins": ["http://127.0.0.1:5500"],
+        "ExposeHeaders": [
+          "x-amz-server-side-encryption",
+          "x-amz-request-id",
+          "x-amz-id-2"
+        ],
+        "MaxAgeSeconds": 3000
+      }
+    ]
+    ```
 
 
