@@ -77,5 +77,57 @@ SEU NOME COMPLETO DE PREFERÊNCIA, LEGÍVEL!!!
       }
     ]
     ```
+## 🗓️ Aula 03/04 - EC2, EBS e AMI
+
+- **EC2 (Elastic Compute Cloud)**:
+  - Serviço de computação da AWS (servidores virtuais).
+  - Permite escalar instâncias conforme a demanda.
+  - Diversos tipos de instância (otimizadas para memória, CPU, etc.).
+
+- **EBS (Elastic Block Store)**:
+  - Armazenamento em bloco para EC2.
+  - Persistente, mesmo se a instância for parada.
+  - Tipos diferentes: SSD, HDD, provisionado por IOPS, etc.
+
+- **AMI (Amazon Machine Image)**:
+  - Imagem usada para lançar instâncias EC2.
+  - Contém o SO, configs e apps pré-instalados.
+  - Pode ser personalizada e reutilizada.
+
+---
+
+## 🗓️ Aula 07/04 - Placement Groups e Modelos de Compra EC2
+
+- **Placement Groups**:
+  - Estratégias para distribuir instâncias:
+    - **Cluster**: todas próximas fisicamente → baixa latência, alta performance.
+    - **Spread**: separadas em hardware distinto → mais resiliência.
+    - **Partition**: grupos lógicos dentro de AZs → ideal para grandes volumes.
+
+- **Modelos de compra do EC2**:
+  - **On-Demand**: paga conforme uso, ideal para cargas variáveis.
+  - **Reserved**: contrato de 1 ou 3 anos → mais barato, ideal para uso contínuo.
+  - **Savings Plans**: compromisso com uso em tempo, mais flexível que reserved.
+  - **Spot Instances**: até 90% mais barato, mas podem ser interrompidas.
+
+---
+
+## 🗓️ Aula 10/04 - RDS e Tipos de Bancos de Dados
+
+- **RDS (Relational Database Service)**:
+  - Banco relacional gerenciado (automatiza backup, patch, escalabilidade).
+  - Suporta vários motores: MySQL, PostgreSQL, Oracle, SQL Server, etc.
+  - Possui Multi-AZ e Read Replicas para alta disponibilidade e performance.
+
+- **Bancos de dados relacionais**:
+  - Estruturados em tabelas, com esquema fixo (SQL).
+  - Usados quando há integridade e relacionamentos complexos.
+  - Ex: MySQL, PostgreSQL, Oracle.
+
+- **Bancos de dados não relacionais (NoSQL)**:
+  - Flexíveis, sem esquema fixo.
+  - Alta escalabilidade horizontal, ideal para grandes volumes de dados variados.
+  - Tipos: documentos, chave-valor, grafos, colunas.
+  - Ex: DynamoDB (chave-valor/documento), MongoDB, Cassandra.
 
 
