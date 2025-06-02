@@ -130,4 +130,77 @@ SEU NOME COMPLETO DE PREFERÊNCIA, LEGÍVEL!!!
   - Tipos: documentos, chave-valor, grafos, colunas.
   - Ex: DynamoDB (chave-valor/documento), MongoDB, Cassandra.
 
+# Segundo Bimestre
+
+## 🗓️ Aula 05/05 - VPC, CIDR e Subnet Pública
+
+- **VPC (Virtual Private Cloud)**:
+  - Rede virtual privada dentro da AWS.
+  - Permite isolar recursos e controlar acessos.
+- **CIDR (Classless Inter-Domain Routing)**:
+  - Define o tamanho da VPC e suas subnets (ex.: 10.0.0.0/16).
+- **Subnet Pública**:
+  - Subnet com rota para a internet via Internet Gateway (IGW).
+  - Permite que instâncias tenham IP público e sejam acessíveis externamente.
+
+---
+
+## 🗓️ Aula 12/05 - Laboratórios Canvas (Guided e Challenge Lab)
+
+- **Guided Lab: Creating a Virtual Private Cloud**:
+  - Passo a passo para criar uma VPC básica.
+  - Criação de subnets, rotas e configurações de segurança.
+- **Challenge (Café) Lab**:
+  - Simulação de ambiente real.
+  - Criar a infraestrutura de rede para o Café, configurando subnets e rotas.
+
+---
+
+## 🗓️ Aula 15/05 - Laboratórios Canvas (Guided e Challenge Lab)
+
+- Reforço dos laboratórios anteriores:
+  - **Guided Lab**: criação básica da VPC com subnets, IGW e rotas.
+  - **Challenge Lab**: cenário prático simulando uma rede para o Café.
+  - Prática essencial para consolidar conhecimento sobre redes na AWS.
+
+---
+
+## 🗓️ Aula 19/05 - VPC Peering, AWS VPN e Direct Connect
+
+- **VPC Peering**:
+  - Conectar VPCs diferentes para comunicação privada.
+  - Importante para integrar ambientes separados.
+- **AWS VPN Site-to-Site**:
+  - Conexão segura entre a VPC e um data center local (on-premises).
+  - Usa IPsec para criptografia.
+- **AWS Direct Connect**:
+  - Conexão física dedicada entre a AWS e a infraestrutura local.
+  - Reduz latência e melhora performance de rede.
+
+---
+
+## 🗓️ Aula 26/05 - IAM Groups, Roles e Cognito
+
+- **IAM Groups**:
+  - Organizar usuários e aplicar políticas em grupo.
+- **Roles (funções)**:
+  - Permissões temporárias para serviços ou usuários externos.
+  - **AWS STS (Security Token Service)**: fornece tokens de sessão temporária.
+- **AWS Cognito**:
+  - Gerencia autenticação e autorização de usuários (login federado).
+  - Útil para apps web/mobile.
+
+---
+
+## 🗓️ Aula 29/05 - Criptografia
+
+- **Criptografia Simétrica**:
+  - Usa a mesma chave para criptografar e descriptografar.
+  - Mais rápida, mas menos flexível para compartilhamento.
+  - Ex.: AES.
+- **Criptografia Assimétrica**:
+  - Usa um par de chaves: pública e privada.
+  - Mais segura para troca de dados entre partes diferentes.
+  - Ex.: RSA.
+
 
