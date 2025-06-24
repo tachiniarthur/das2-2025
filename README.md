@@ -1,7 +1,7 @@
 # Design e Arquitetura de Software 2
 SEU NOME COMPLETO DE PREFERÊNCIA, LEGÍVEL!!!
 
-## Aula 24/02 - Well-Architected Framework  
+## 🗓️ Aula 24/02 - Well-Architected Framework  
 - **Seis pilares**:
   - **Excelência Operacional**: Automação e monitoramento contínuo.  
   - **Segurança**: Controle de acessos e proteção dos dados.  
@@ -10,7 +10,7 @@ SEU NOME COMPLETO DE PREFERÊNCIA, LEGÍVEL!!!
   - **Otimização de Custos**: Evitar desperdícios sem comprometer a qualidade.  
   - **Sustentabilidade**: Uso eficiente e consciente da infraestrutura.  
 
-## Aula 27/02 - Trade-Offs e Infraestrutura como Código  
+## 🗓️ Aula 27/02 - Trade-Offs e Infraestrutura como Código  
 - **Trade-offs**: Sempre equilibrar custo, desempenho e disponibilidade.  
 - **Escalabilidade vs Elasticidade**: Crescimento planejado vs ajuste dinâmico.  
 - **Infraestrutura como Código (IaC)**: Automação total da infraestrutura.  
@@ -19,7 +19,7 @@ SEU NOME COMPLETO DE PREFERÊNCIA, LEGÍVEL!!!
 - **Design de serviços, não servidores** (focar em **serverless**).  
 - **Escolha do banco de dados**: Relacional x NoSQL, dependendo da aplicação.  
 
-## Aula 06/03 - Alta Disponibilidade e Otimização  
+## 🗓️ Aula 06/03 - Alta Disponibilidade e Otimização  
 - **Evitar ponto único de falha**: Sempre usar redundância.  
 - **Otimização de custos**: Reservar instâncias, desligar recursos ociosos.  
 - **Uso de cache**: Reduz chamadas ao banco e melhora a performance.  
@@ -28,7 +28,7 @@ SEU NOME COMPLETO DE PREFERÊNCIA, LEGÍVEL!!!
   - **Zonas de Disponibilidade (AZs)**: Redundância dentro das regiões.  
   - **Local Zones** e **Data Centers**: Melhoram latência para aplicações específicas.  
 
-## Aula 10/03 - Segurança na AWS  
+## 🗓️ Aula 10/03 - Segurança na AWS  
 - **POPs (Edge Locations)**: Aceleram entrega de conteúdo (CloudFront).  
 - **Modelo de responsabilidade compartilhada**:  
   - AWS protege a infraestrutura.  
@@ -37,7 +37,7 @@ SEU NOME COMPLETO DE PREFERÊNCIA, LEGÍVEL!!!
 - **Princípio do privilégio mínimo**: Conceder apenas as permissões essenciais.  
 - **Criptografia**: Sempre proteger dados armazenados e em trânsito.  
 
-## Aula 13/03 - IAM (Identity and Access Management)  
+## 🗓️ Aula 13/03 - IAM (Identity and Access Management)  
 - **IAM**: Gestão de usuários e permissões na AWS.  
 - **Privilégio mínimo**: Evitar acessos desnecessários.  
 - **Autenticação vs Autorização**.  
@@ -45,7 +45,7 @@ SEU NOME COMPLETO DE PREFERÊNCIA, LEGÍVEL!!!
   - Console (gráfico).  
   - Programático (CLI, SDK, chaves de acesso).  
 
-## Aula 17/03 - Políticas de Acesso e S3  
+## 🗓️ Aula 17/03 - Políticas de Acesso e S3  
 - **Política de Identidade**: Aplicada a usuários, grupos e funções.  
 - **Política de Recurso**: Aplicada diretamente a serviços (ex: S3).  
 - **Amazon S3**:  
@@ -53,7 +53,7 @@ SEU NOME COMPLETO DE PREFERÊNCIA, LEGÍVEL!!!
   - Controle de acessos e permissões.  
   - Versionamento, criptografia e gerenciamento de ciclo de vida.  
 
-## Aula 24/03 - S3 - Gerenciamento, Versionamento e CORS  
+## 🗓️ Aula 24/03 - S3 - Gerenciamento, Versionamento e CORS  
 - **Gerenciamento de ciclo de vida**:  
   - Mover ou excluir objetos automaticamente (ex: arquivar no **Glacier**).  
 - **Versionamento**:  
@@ -203,4 +203,44 @@ SEU NOME COMPLETO DE PREFERÊNCIA, LEGÍVEL!!!
   - Mais segura para troca de dados entre partes diferentes.
   - Ex.: RSA.
 
+## 🗓️ Aula 16/06 - Load Balancer e DNS
+
+- **Load Balancer (Balanceador de Carga)**:
+  - Distribui automaticamente o tráfego entre múltiplas instâncias.
+  - Aumenta a **alta disponibilidade** e **tolerância a falhas**.
+  - Tipos na AWS:
+    - **ALB (Application Load Balancer)**: Camada 7 (HTTP/HTTPS), ideal para apps web.
+    - **NLB (Network Load Balancer)**: Camada 4 (TCP/UDP), performance alta.
+    - **CLB (Classic Load Balancer)**: legado, suporte básico a camadas 4 e 7.
+  - Pode ser configurado com **health checks** para garantir que só instâncias saudáveis recebam tráfego.
+
+- **DNS (Domain Name System)**:
+  - Traduz nomes de domínio (ex: `exemplo.com`) para endereços IP.
+  - Na AWS, o serviço de DNS é o **Route 53**.
+  - Suporta **balanceamento de carga com DNS**, **failover**, **geolocalização**, entre outros.
+  - Importante para conectar domínios aos serviços hospedados na AWS.
+
+---
+
+## 🗓️ Aula 23/06 - Infraestrutura como Código (IaC)
+
+- **Infraestrutura como Código (IaC)**:
+  - Permite criar e gerenciar infraestrutura com arquivos de configuração.
+  - Traz **automação**, **repetibilidade**, **controle de versão** e **consistência**.
+  - Evita configuração manual e reduz erro humano.
+
+- **Ferramentas populares**:
+  - **AWS CloudFormation**:
+    - Ferramenta nativa da AWS.
+    - Usa arquivos YAML ou JSON.
+    - Permite definir toda a infraestrutura como um template.
+  - **Terraform**:
+    - Ferramenta open source.
+    - Multicloud (AWS, Azure, GCP, etc.).
+    - Usa linguagem declarativa (HCL).
+
+- **Benefícios do IaC**:
+  - Implantação rápida e padronizada.
+  - Fácil escalabilidade.
+  - Ideal para ambientes DevOps e CI/CD.
 
