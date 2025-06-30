@@ -244,3 +244,41 @@ SEU NOME COMPLETO DE PREFERÊNCIA, LEGÍVEL!!!
   - Fácil escalabilidade.
   - Ideal para ambientes DevOps e CI/CD.
 
+## 🗓️ Aula 26/06 - Como Reduzir o Acoplamento das Aplicações
+
+- **Acoplamento** = nível de dependência entre componentes de um sistema.
+  - Quanto mais acoplados, mais difícil manter, escalar e testar.
+
+### 🔧 Estratégias para reduzir o acoplamento:
+
+- **Dividir responsabilidades (princípio da responsabilidade única)**  
+  - Cada serviço/componente deve fazer uma única coisa bem definida.
+
+- **Arquitetura em microsserviços**  
+  - Separar a aplicação em serviços menores e independentes.
+  - Comunicação entre serviços via **APIs** ou **mensageria**.
+
+- **Utilizar filas e eventos (mensageria assíncrona)**  
+  - Ex: SQS, SNS, Kafka.
+  - Permite que serviços se comuniquem de forma desacoplada.
+
+- **Evitar chamadas diretas entre serviços**  
+  - Usar gateways, barramentos de eventos ou middlewares.
+
+- **Definir contratos bem claros entre os serviços (APIs)**  
+  - Padronizar respostas, endpoints e formatos de dados.
+
+- **Separação entre camadas (MVC, por exemplo)**  
+  - Manter lógicas distintas separadas (ex: controller, service, repository).
+
+- **Injeção de dependência (Dependency Injection)**  
+  - Reduz a rigidez entre classes/módulos, facilitando testes e trocas.
+
+- **Uso de banco de dados separado por serviço** (em microsserviços)  
+  - Evita dependência compartilhada e conflitos de schema.
+
+### Benefícios:
+- Facilita manutenção e evolução do sistema.
+- Aumenta testabilidade.
+- Permite deploys independentes.
+- Aumenta a resiliência e escalabilidade.
